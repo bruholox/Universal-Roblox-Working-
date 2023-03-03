@@ -8,21 +8,21 @@ local Window = Library.CreateLib("eat game ass", "Ocean")
 -- TAB
 
 local Human = Window:NewTab("Human")
-local HumanSection = Human:NewSection("Speed")
-HumanSection:NewToggle("Speed = 100", "Makes your speed to 100", function(state)
-    if state then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-    else
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end
+local HumanSection = Human:NewSection("Human Powers")
+HumanSection:NewSlider("Walkspeed", "Speed Adjuster", 500, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+HumanSection:NewButton("noclip","noclip", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruholox/noclip/main/SCRIPT",true))();
+end)
+
 
 -- TAB
 
 local Movement = Window:NewTab("Movement")
 local MovementSection = Movement:NewSection("Fly")
-MovementSection:NewButton("Fly", function()
-    print("BROKEN")
+MovementSection:NewButton("Fly","fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 end)
 
 -- TAB
