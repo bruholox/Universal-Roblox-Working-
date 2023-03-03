@@ -29,7 +29,7 @@ end)
 local Movement = Window:NewTab("Movement")
 local MovementSection = Movement:NewSection("Fly")
 MovementSection:NewButton("Fly","fly", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mitodocpp/epic-gui/a803905fad948bb511a871b183999923008451f8/v1.9.lua",true))();
 end)
 
 -- TAB
