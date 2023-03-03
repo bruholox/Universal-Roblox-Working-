@@ -12,6 +12,13 @@ local HumanSection = Human:NewSection("Human Powers")
 HumanSection:NewSlider("Walkspeed", "Speed Adjuster", 500, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+HumanSection:NewSlider("Jumppower", "JP Adjuster", 500, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+HumanSection:NewButton("Reset WS/JP","resets the following value", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
 HumanSection:NewButton("noclip","noclip", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bruholox/noclip/main/SCRIPT",true))();
 end)
